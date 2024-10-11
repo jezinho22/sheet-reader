@@ -4,6 +4,7 @@ import cors from "cors";
 const app = express()
 
 app.use(cors());
+app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
@@ -11,11 +12,10 @@ const port = process.env.PORT || 3000;
 app.post("/jez", function (request, response) {
     console.log("Oi, oi, saveloy!")
     console.log(request.body)
-    // const data = request.body;
-    // console.log(JSON.parse(request.body))
-    response.json("Oi oi!");
+    const data = request.body;
+    console.log(data)
+    response.json(request.body);
 
-    // response.json("This is the POST endpoint for /jez");
   });
 
 app.get("/", (request, response) => response.json("Welcome to my crib, bruh"));

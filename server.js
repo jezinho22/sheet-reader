@@ -9,9 +9,10 @@ const port = process.env.PORT || 3000;
 
 // use a different HTTP method
 app.post("/jez", function (request, response) {
-    // console.log(request.body)
-    const data = request.body;
-    console.log(JSON.parse(request.body))
+    console.log("Oi, oi, saveloy!")
+    console.log(request.body)
+    // const data = request.body;
+    // console.log(JSON.parse(request.body))
     response.json("Oi oi!");
 
     // response.json("This is the POST endpoint for /jez");
